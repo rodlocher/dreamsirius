@@ -1,0 +1,130 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all var(--transition-smooth);
+  padding: 18px 0;
+  background: rgba(246, 244, 239, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 57, 95, 0.08);
+}
+
+.header.scrolled {
+  background: rgba(246, 244, 239, 0.96);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 57, 95, 0.12);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-primary);
+}
+
+.logo-svg {
+  width: 48px;
+  height: 46px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+.brand-sub {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+  margin-top: 3px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+.nav-links a.btn-header-whatsapp {
+  color: #FFFFFF;
+  background-color: var(--color-primary);
+  padding: 10px 20px;
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nav-links a.btn-header-whatsapp:hover {
+  background-color: var(--color-whatsapp);
+  color: #FFFFFF;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  color: var(--color-primary);
+  padding: 8px;
+}
+
+@media (max-width: 992px) {
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 71px;
+    left: 0;
+    right: 0;
+    background: #F6F4EF;
+    flex-direction: column;
+    padding: 28px 20px;
+    border-bottom: 1px solid var(--color-border);
+    gap: 18px;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition-fast);
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

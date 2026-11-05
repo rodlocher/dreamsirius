@@ -1,0 +1,350 @@
+.floorplan-section {
+  padding: 7rem 0;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.floorplan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.layer-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.layer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.15rem;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: var(--transition-smooth);
+}
+
+.layer-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+.layer-btn.active {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+.floorplan-workspace {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.blueprint-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.blueprint-canvas {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  border: none;
+  overflow: visible;
+}
+
+.blueprint-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+.blueprint-img.layer-mode-rede,
+.blueprint-img.layer-mode-clima,
+.blueprint-img.layer-mode-agua {
+  filter: contrast(0.95) brightness(1.02);
+  opacity: 0.82;
+}
+
+.blueprint-overlay-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tech-line {
+  fill: none;
+  stroke-width: 0.7;
+  stroke-dasharray: 2 1.2;
+  animation: dashFlow 12s linear infinite;
+}
+
+.fiber-line {
+  stroke: #2f5266;
+}
+
+.clima-line {
+  stroke: #4b7f7c;
+}
+
+.heat-line {
+  stroke: #b55d43;
+}
+
+@keyframes dashFlow {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.wifi-wave {
+  fill: rgba(47, 82, 102, 0.06);
+  stroke: rgba(47, 82, 102, 0.35);
+  stroke-width: 0.3;
+  animation: pulseWave 3.5s ease-out infinite;
+}
+
+.wifi-wave.wave-2 {
+  animation-delay: 1.2s;
+}
+
+@keyframes pulseWave {
+  0% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+/* Botões dos Cômodos sobre a planta */
+.room-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.52rem;
+  background: rgba(246, 244, 239, 0.94);
+  border: 1px solid rgba(28, 43, 54, 0.35);
+  color: var(--text-primary);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(28, 43, 54, 0.08);
+  transition: var(--transition-smooth);
+}
+
+.room-pin:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+  z-index: 10;
+}
+
+.room-pin.active {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+  z-index: 9;
+}
+
+.pin-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-terracotta);
+  display: inline-block;
+}
+
+.room-pin.active .pin-dot,
+.room-pin:hover .pin-dot {
+  background: #e5b899;
+}
+
+/* Indicadores técnicos das camadas */
+.tech-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  pointer-events: none;
+  color: #ffffff;
+}
+
+.node-fiber,
+.node-wifi,
+.node-tv {
+  background: #2f5266;
+}
+
+.node-ac {
+  background: #3d6b68;
+}
+
+.node-gas,
+.node-hybrid {
+  background: #a85239;
+}
+
+.blueprint-caption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* Inspetor Editorial Lateral */
+.room-inspector {
+  border-left: 1px solid var(--border-subtle);
+  padding-left: 2.5rem;
+}
+
+.inspector-photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+  background: #eae4dc;
+}
+
+.inspector-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.inspector-photo-wrap:hover .inspector-photo {
+  transform: scale(1.03);
+}
+
+.inspector-photo-nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background: rgba(28, 25, 23, 0.85);
+  color: #ffffff;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.inspector-photo-nav button {
+  padding: 0.55rem 0.75rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.inspector-photo-nav button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.inspector-photo-nav span {
+  padding: 0 0.5rem;
+}
+
+.inspector-subtitle {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-terracotta);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.inspector-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.85rem;
+  font-weight: 400;
+}
+
+.inspector-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.inspector-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.inspector-specs li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.spec-bullet {
+  width: 22px;
+  height: 22px;
+  background-color: rgba(179, 139, 100, 0.16);
+  color: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .floorplan-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .room-inspector {
+    border-left: none;
+    border-top: 1px solid var(--border-subtle);
+    padding-left: 0;
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .room-pin {
+    padding: 0.22rem 0.42rem;
+    font-size: 0.6rem;
+  }
+}
