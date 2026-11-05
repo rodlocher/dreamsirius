@@ -253,14 +253,16 @@
   right: 0;
   display: flex;
   align-items: center;
-  background: rgba(28, 25, 23, 0.85);
+  background: var(--color-primary);
   color: #ffffff;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
   letter-spacing: 0.08em;
 }
 
 .inspector-photo-nav button {
-  padding: 0.55rem 0.75rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--color-primary);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -269,11 +271,18 @@
 }
 
 .inspector-photo-nav button:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--color-accent);
+  color: #ffffff;
 }
 
 .inspector-photo-nav span {
-  padding: 0 0.5rem;
+  padding: 0 0.65rem;
+  background: rgba(0, 0, 0, 0.22);
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
 
 .inspector-subtitle {

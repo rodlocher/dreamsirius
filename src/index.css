@@ -112,6 +112,7 @@ button {
   border: none;
   outline: none;
   border-radius: 0;
+  background-color: transparent;
   transition: all var(--transition-fast);
 }
 
