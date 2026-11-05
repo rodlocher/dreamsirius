@@ -45,7 +45,7 @@ export default function Hero({ onOpenPhoto }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <span className="section-kicker">
+          <span className="section-kicker hero-address-kicker">
             Av. Maria Emília Alves dos Santos de Angelis, 874 • Apto 113
           </span>
 
@@ -95,7 +95,7 @@ export default function Hero({ onOpenPhoto }) {
             </div>
             <div>
               <strong>2 Vagas Fixas</strong>
-              <span>Ao Lado do Elevador</span>
+              <span>Paralelas, próximas ao Elevador</span>
             </div>
           </div>
         </motion.div>

@@ -5,17 +5,18 @@
   width: 100%;
   z-index: 1000;
   transition: all var(--transition-smooth);
-  padding: 18px 0;
-  background: rgba(246, 244, 239, 0.85);
+  padding: 16px 0;
+  background: var(--color-primary);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 57, 95, 0.08);
+  border-bottom: 1px solid rgba(223, 203, 181, 0.18);
 }
 
 .header.scrolled {
-  background: rgba(246, 244, 239, 0.96);
+  background: #002F4E;
   padding: 12px 0;
-  border-bottom: 1px solid rgba(0, 57, 95, 0.12);
+  border-bottom: 1px solid rgba(223, 203, 181, 0.24);
+  box-shadow: 0 10px 30px rgba(0, 28, 48, 0.25);
 }
 
 .header-content {
@@ -28,13 +29,13 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--color-primary);
+  color: #F6F4EF;
 }
 
 .logo-svg {
   width: 48px;
   height: 46px;
-  color: var(--color-primary);
+  color: #F6F4EF;
   flex-shrink: 0;
 }
 
@@ -48,14 +49,14 @@
   font-size: 1.55rem;
   letter-spacing: 0.08em;
   line-height: 1;
-  color: var(--color-primary);
+  color: #F6F4EF;
 }
 
 .brand-sub {
   font-size: 0.64rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: var(--color-accent);
+  color: #DFCBB5;
   margin-top: 3px;
 }
 
@@ -70,16 +71,16 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-text-muted);
+  color: rgba(246, 244, 239, 0.86);
 }
 
 .nav-links a:hover {
-  color: var(--color-primary);
+  color: #DFCBB5;
 }
 
 .nav-links a.btn-header-whatsapp {
   color: #FFFFFF;
-  background-color: var(--color-primary);
+  background-color: var(--color-whatsapp);
   padding: 10px 20px;
   border-radius: 0;
   display: inline-flex;
@@ -88,14 +89,14 @@
 }
 
 .nav-links a.btn-header-whatsapp:hover {
-  background-color: var(--color-whatsapp);
+  background-color: #17663A;
   color: #FFFFFF;
 }
 
 .mobile-menu-btn {
   display: none;
   background: transparent;
-  color: var(--color-primary);
+  color: #F6F4EF;
   padding: 8px;
 }
 
@@ -111,10 +112,10 @@
     top: 71px;
     left: 0;
     right: 0;
-    background: #F6F4EF;
+    background: var(--color-primary);
     flex-direction: column;
     padding: 28px 20px;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(223, 203, 181, 0.22);
     gap: 18px;
     transform: translateY(-20px);
     opacity: 0;

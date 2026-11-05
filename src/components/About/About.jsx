@@ -45,9 +45,9 @@ export default function About({ onOpenPhoto }) {
               <div className="editorial-item">
                 <span className="editorial-num">03</span>
                 <div>
-                  <h3>Duas Vagas Fixas ao Lado do Elevador</h3>
+                  <h3>Duas Vagas Fixas próximas ao Elevador</h3>
                   <p>
-                    Vagas cobertas, livres e paralelas posicionadas estrategicamente junto ao acesso social do edifício.
+                    Vagas cobertas, paralelas e próximas ao elevador facilitam o seu dia a dia.
                   </p>
                 </div>
               </div>

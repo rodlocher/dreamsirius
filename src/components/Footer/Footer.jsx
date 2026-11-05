@@ -22,7 +22,7 @@ const Footer = () => {
                 <span>Avenida Maria Emília Alves dos Santos de Angelis, 874</span>
               </p>
               <p className="location-desc">
-                Posicionado no último andar e voltado para uma área de preservação ambiental definitiva, garantindo silêncio absoluto, pôr do sol desimpedido e duas vagas paralelas ao lado do elevador.
+                Posicionado no último andar e voltado para uma área de preservação ambiental definitiva, garantindo silêncio absoluto, pôr do sol desimpedido e duas vagas paralelas próximas ao elevador.
               </p>
 
               <dl className="location-highlights">
@@ -32,7 +32,7 @@ const Footer = () => {
                 </div>
                 <div className="loc-stat">
                   <dt>Garagem</dt>
-                  <dd>2 vagas fixas, cobertas e paralelas ao lado do elevador</dd>
+                  <dd>2 vagas fixas, cobertas, paralelas e próximas ao elevador</dd>
                 </div>
                 <div className="loc-stat">
                   <dt>Pavimento</dt>

@@ -26,7 +26,7 @@ const FEATURES = [
       'A climatização combina sistema Multi Split na sala e no escritório com um discreto ar-condicionado de gaveta embutido na suíte. Nos banheiros, o sistema híbrido une aquecimento central a gás a circuitos elétricos individuais nos chuveiros: você inicia o banho quente no elétrico sem desperdício de água e alterna para o gás assim que a temperatura estabiliza.',
     specs: [
       'Multi Split (Living + Home Office) e AC de gaveta na Suíte Master',
-      'Chuveiros híbridos: conforto imediato do elétrico + vazão do aquecimento a gás',
+      'Chuveiros híbridos: conforto imediato do elétrico + gás',
       'Aquecedor digital a gás instalado na área técnica'
     ],
     image: '/banheirosuite-1.jpg',

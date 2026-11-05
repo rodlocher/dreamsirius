@@ -116,17 +116,17 @@ const ROOMS = {
   },
   sacada: {
     id: 'sacada',
-    name: 'Varanda Gourmet Integrada',
-    pinLabel: 'Varanda Gourmet',
+    name: 'Varanda Integrada',
+    pinLabel: 'Varanda',
     subtitle: 'Vista Definitiva para Área de Preservação',
     description:
-      'Integrada ao living, emoldura o pôr do sol livre para sempre sobre a reserva ambiental, sem risco de novos edifícios à frente.',
+      'Integrada e nivelada ao living, emoldura o pôr do sol livre para sempre sobre a reserva ambiental, sem risco de novos edifícios à frente.',
     x: 64,
     y: 84,
     photos: ['/Sacada-1.jpg', '/Sacada-2.jpg', '/Sacada-3.jpg', '/Sacada-4.jpg'],
     specs: [
       'Vista eterna para área de preservação',
-      'Bancada gourmet com churrasqueira',
+      'Piso nivelado integrado ao living',
       'Envidraçamento panorâmico'
     ]
   },
@@ -198,7 +198,7 @@ const LAYERS = [
   },
   {
     id: 'agua',
-    label: 'Banho Híbrido & Gás',
+    label: 'Banho Híbrido',
     icon: Flame
   }
 ];
